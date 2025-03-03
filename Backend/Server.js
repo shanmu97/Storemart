@@ -11,6 +11,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors({origin:'*'}))
 
+app.use('/user',require('./Routes/UserRoutes'))
+
 
 app.listen(port,(req,res)=>{
     console.log(`Server is running on ${port}`)
