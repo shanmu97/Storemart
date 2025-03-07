@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors({origin:'*'}))
 
 app.use('/user',require('./Routes/UserRoutes'))
+app.use('/admin',require('./Routes/AdminRoutes'))
 
 
 app.listen(port,(req,res)=>{
